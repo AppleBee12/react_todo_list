@@ -89,8 +89,10 @@ function App(value) {
 
     let setStorage = useCallback(()=>{
       console.log('setStorage 실행');
+      
       let todoString = JSON.stringify(todo);
-      window.localStorage.setItem('todo', todoString); });
+      window.localStorage.setItem('todo', todoString); 
+    },[todo]);
 
   //로컬 스토리지에서 todo라는 key의 값이 있으면 그걸 조회해서->todo의 목록으로 저장
   useEffect(() => {//최초 한번 실행, getTodoList객체변경되면 getTodoList다시 실행
